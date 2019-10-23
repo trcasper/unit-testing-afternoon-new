@@ -4,7 +4,6 @@ import { shortenText } from '../utils/functions';
 import Div from '../styled/Div';
 import styled from 'styled-components';
 import { StyledLink } from '../styled/Button';
-
 const PostWidget = ({
   title,
   text,
@@ -43,7 +42,6 @@ const PostWidget = ({
     </PostContainer>
   );
 };
-
 const PostContainer = styled(Div)`
   border: 1px solid black;
   width: ${({ fullWidth }) => (fullWidth ? '100%' : '550px')};
@@ -52,7 +50,6 @@ const PostContainer = styled(Div)`
     cursor: pointer;
   }
 `;
-
 const UserLink = styled(StyledLink)`
   position: absolute;
   top: 0;
@@ -60,5 +57,4 @@ const UserLink = styled(StyledLink)`
   margin: 1.5em 0 0 1.5em;
   ${({ fullWidth }) => (fullWidth ? '' : 'font-size: .8em;')}
 `;
-
 export default withRouter(PostWidget);
